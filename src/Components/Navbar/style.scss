@@ -1,0 +1,118 @@
+.header{
+    max-width: 1380px;
+    margin: auto;
+    gap: 10px ;
+    padding: 0 20px;
+    .menu{
+        display: none;
+    }   
+   ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+    gap: 40px;
+    color: var(--lime-green);
+    margin-top: 20px;
+    li:nth-child(n+2){
+        margin-top: 20px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            color: var(--red-);
+            transition: 0.5s;
+        }
+            input[type = text]{
+                background-color: transparent;
+                border: 1px solid var(--lime-green);
+                border-radius: 5px;
+                outline: 0;
+                padding: 15px 50px 15px 25px;
+                color: white;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+    }
+    .alunArea{
+        border: 1px solid var(--lime-green);
+        padding: 10px 20px;    
+        border-radius: 5px;
+    }
+   }
+
+}
+
+.inputText{
+ display: block;
+ position: relative;
+ .lupaImage{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: auto;
+    padding-right: 10px;
+ }
+}
+
+@media screen and (max-width:1200px) {
+    .inputText{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header{
+        .isMenuOpentrue{
+            li{
+                display: block ;
+            }
+            
+        }
+        .isMenuOpenfalse{
+           li{
+            display: none ;
+           }
+        }
+        .inputText{
+            display: none !important;
+        }
+        ul{
+            flex-direction: column;
+          .logoMenu{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+            width: 100%;
+            .menu{
+                width: 40px;
+                height: auto;
+                margin-top: 30px;
+                display: block;
+            }
+            li{
+                
+                border: 1px solid var(--lime-green);
+                padding: 10px 0px !important;
+                width: 70%;
+                text-align: center;
+                border-radius: 5px;
+                &:hover{
+                    background-color: var(--lime-green);
+                }
+            }
+        }
+        padding-bottom:40px;
+        border-bottom: 1px solid var(--lime-green);
+    }
+}
+
+.logo{
+    width: 150px;
+    height: auto;
+}

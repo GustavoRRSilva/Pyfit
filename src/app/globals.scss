@@ -1,0 +1,18 @@
+:root {
+  --background: #1E1F24;
+  --lime-green: #74F325;
+  --dark-lime-green:#44AA04;
+  --red-:#FF4856; 
+  --light-gray:#2C3C47
+}
+body{
+  background-color: var(--background);
+  font-family: "Poppins",sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
