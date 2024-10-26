@@ -5,7 +5,7 @@ import Logo from "@/Assets/logo.svg";
 import Lupa from "@/Assets/lupa.svg";
 import Menu from "@/Assets/menu.svg";
 import Delete from "@/Assets/deleteIcon.svg"
-import "./style.scss";
+import styles from "./style.module.scss";
 import { useState } from "react";
 export default function Navbar() {
   const [isMenuOpen,setIsMenuOpen] = useState(false)
@@ -14,15 +14,15 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="header">
-      <ul className={`isMenuOpen${isMenuOpen}`}>
-        <div className= "logoMenu"  >
+    <header className={styles.header}>
+      <ul className={`${isMenuOpen ? styles.isMenuOpentrue : styles.isMenuOpenfalse}`}>
+        <div className={styles.logoMenu}  >
           <Image
             width={10}
             height={10}
             src={Logo}
             alt="logo pyfit"
-            className="logo"
+            className={styles.logo}
           />
           <Image
             width={10}
@@ -30,23 +30,23 @@ export default function Navbar() {
             src={isMenuOpen ?  Delete  : Menu}
             alt="logo pyfit"
             onClick={changeMenuOpen}
-            className="menu"
+            className={styles.menu}
           />
         </div>
         <li>Unidades</li>
         <li>Planos</li>
         <li>Conheça</li>
-        <li className="inputText">
+        <li className={styles.inputText}>
           <Image
             src={Lupa}
             width={20}
             height={20}
             alt="Lupa image"
-            className="lupaImage"
+            className={styles.lupaImage}
           />
           <input type="text" name="" id="" />
         </li>
-        <li className="alunArea">Área do aluno</li>
+        <li className={styles.alunArea}>Área do aluno</li>
       </ul>
     </header>
   );

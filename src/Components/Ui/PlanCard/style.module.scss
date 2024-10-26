@@ -1,0 +1,86 @@
+.card{
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--lime-green);
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .betterBenefit{
+    text-align: center;
+    color: var(--lime-green);
+    font-weight: bold;
+    border: 1px solid var(--lime-green);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    background-color: var(--background);
+    left: 50%;
+    font-size: 1.2em;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .planType{
+        margin-top: 30px;
+        color: var(--lime-green);
+        font-size: 2em;
+    }
+    .valuePlan{
+        text-align: center;
+        margin: 15px 0 ;
+        color: var(--lime-green);
+        font-size: 2em;
+        font-weight: bold;
+        b{
+            font-size: 1.5em;
+        }
+    }
+    .whiteComum{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1em;
+    }
+    .toEnroll{
+        width: 70%;
+        padding: 15px 10px;
+        border-radius: 5px;
+        outline: 0;
+        border: 1px solid var(--dark-lime-green);
+        background-color: var(--lime-green);
+        font-weight: bold;
+        color: var(--background);
+        font-size: 1.3em;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin: 20px auto;
+        cursor: pointer;
+    }
+    .benefits{
+        margin-left: 70px;
+    }
+    .benefit{
+        display: flex;
+        margin: 15px 0;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+     
+        gap: 10px;
+        
+        p{
+            margin-top: 0;
+            font-weight: bold;
+        }
+        img{
+            width: 25px;
+            height: auto;
+        }
+    }
+}
