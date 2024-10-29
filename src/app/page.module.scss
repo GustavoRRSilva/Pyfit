@@ -1,0 +1,29 @@
+.homeLoading {
+  opacity: 0;
+}
+.home {
+  opacity: 1;
+  position: relative;
+}
+.loading {
+  position: absolute;
+  left: 45%; // Alinhado ao centro horizontalmente
+  top: 50%; // Alinhado ao centro verticalmente
+  width: 200px;
+  height: auto;
+  animation: rotate 1s linear infinite;
+  transform: translate(-50%, -50%); // Centraliza o elemento
+}
+
+.notLoading {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

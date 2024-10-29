@@ -4,30 +4,35 @@ import Image from "next/image";
 import Logo from "@/Assets/logo.svg";
 import Lupa from "@/Assets/lupa.svg";
 import Menu from "@/Assets/menu.svg";
-import Delete from "@/Assets/deleteIcon.svg"
+import Delete from "@/Assets/deleteIcon.svg";
 import styles from "./style.module.scss";
 import { useState } from "react";
+import Link from "next/link";
 export default function Navbar() {
-  const [isMenuOpen,setIsMenuOpen] = useState(false)
-  console.log(isMenuOpen)
-  const changeMenuOpen = ()=> {
-    setIsMenuOpen(!isMenuOpen)
-  }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  console.log(isMenuOpen);
+  const changeMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <header className={styles.header}>
-      <ul className={`${isMenuOpen ? styles.isMenuOpentrue : styles.isMenuOpenfalse}`}>
-        <div className={styles.logoMenu}  >
+      <ul
+        className={`${isMenuOpen ? styles.isMenuOpentrue : styles.isMenuOpenfalse}`}
+      >
+        <div className={styles.logoMenu}>
+          <Link href="/">
+            <Image
+              width={10}
+              height={10}
+              src={Logo}
+              alt="logo pyfit"
+              className={styles.logo}
+            />
+          </Link>
           <Image
             width={10}
             height={10}
-            src={Logo}
-            alt="logo pyfit"
-            className={styles.logo}
-          />
-          <Image
-            width={10}
-            height={10}
-            src={isMenuOpen ?  Delete  : Menu}
+            src={isMenuOpen ? Delete : Menu}
             alt="logo pyfit"
             onClick={changeMenuOpen}
             className={styles.menu}
@@ -46,7 +51,9 @@ export default function Navbar() {
           />
           <input type="text" name="" id="" />
         </li>
-        <li className={styles.alunArea}>Área do aluno</li>
+        <li className={styles.alunArea}>
+          <Link href="/login">Área do aluno</Link>
+        </li>
       </ul>
     </header>
   );

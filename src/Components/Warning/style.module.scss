@@ -1,0 +1,30 @@
+.warning {
+  max-width: 1380px;
+  margin: 40px auto;
+  color: #fff;
+  padding: 20px;
+  border: 2px solid var(--lime-green);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0px 20px;
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+  ul {
+    list-style: disc;
+    margin-top: 10px;
+    li {
+      margin: 5px 0px 0px 70px;
+      font-size: 1.2em;
+      font-weight: bold;
+      line-height: 25px;
+    }
+  }
+}

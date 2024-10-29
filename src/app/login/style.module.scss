@@ -1,0 +1,81 @@
+.login {
+  max-width: 1380px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 0px 20px;
+
+  h2 {
+    color: var(--lime-green);
+    font-size: 2.4em;
+  }
+  .isClient {
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+    font-size: 1.3em;
+  }
+  form {
+    margin-top: 30px;
+    label {
+      color: white;
+      font-weight: lighter;
+      font-size: 1.3em;
+      p {
+        margin: 15px 0 5px 0;
+      }
+      input {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--lime-green);
+        outline: 0;
+        color: white;
+        font-size: 0.9em;
+      }
+    }
+    .sendForm {
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+      background-color: var(--lime-green);
+      padding: 10px 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      &:disabled {
+        opacity: 0.7;
+      }
+    }
+    .error {
+      color: var(--red-);
+    }
+    .loadingImage {
+      width: 20px;
+      height: auto;
+      animation: rotateLoading 1s linear infinite;
+    }
+  }
+
+  .firstAccess {
+    margin-top: 20px;
+    color: white;
+    font-weight: lighter;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes rotateLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

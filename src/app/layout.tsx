@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "./globals.scss";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,6 +18,7 @@ export default function RootLayout({
         </Head>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

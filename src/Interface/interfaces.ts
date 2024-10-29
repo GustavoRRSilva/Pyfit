@@ -1,3 +1,3 @@
 export default interface CardPlan {
-    betterBenefit:boolean
+  betterBenefit: boolean;
 }

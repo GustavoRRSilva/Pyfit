@@ -1,29 +1,30 @@
-.plans{
-    max-width: 1380px;
-    width: 100%;
-    margin: auto;
-    h2{
-        color: white;
-        font-weight: 600;
-        text-align: center;
+.plans {
+  max-width: 1380px;
+  width: 100%;
+  margin: auto;
+  padding: 0px 20px;
+  h2 {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    margin-top: 10px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    .pyFit {
+      color: var(--red-);
+      font-weight: bold;
     }
-    p{
-        margin-top: 10px;
-        color: white;
-        font-size: 1.3em;
-        font-weight: 400;
-        .pyFit{
-            color: var(--red-);
-            font-weight: bold;
-        }
-        b{
-            color: var(--lime-green);
-        }
+    b {
+      color: var(--lime-green);
     }
-    .planDetails{
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-        gap: 40px;
-    }
+  }
+  .planDetails {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 40px;
+  }
 }
