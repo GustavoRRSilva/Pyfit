@@ -32,7 +32,8 @@ class User(models.Model):
     day_of_week = models.CharField(max_length=10, null=True)  # Dia da semana (por exemplo: 'Monday')
     time = models.TimeField(null=True)  # Horário da aula
     attended = models.BooleanField(default=False)  # Se o aluno compareceu ou não
-
+    password = models.CharField(max_length=20,default='abcd1234')
+    is_adm = models.BooleanField(default=False)
 class Payment(models.Model):
     payment_methods = [
         ("PIX", "PIX"),
