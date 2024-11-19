@@ -2,7 +2,7 @@ import PlanCard from "../Ui/PlanCard";
 import styles from "./style.module.scss";
 export default function Plans() {
   return (
-    <section className={styles.plans}>
+    <section className={styles.plans} id="plans">
       <h2>Conheça nossos planos</h2>
       <p>
         Comece a transformar sua vida hoje com a{" "}

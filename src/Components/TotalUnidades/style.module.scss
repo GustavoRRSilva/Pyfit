@@ -1,0 +1,44 @@
+.div {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0px 20px;
+
+  form {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    input {
+      padding: 20px 10px;
+      border-radius: 5px;
+      outline: 0;
+    }
+    input[type="submit"] {
+      width: 15%;
+      background-color: var(--lime-green);
+      border: 1px solid var(--dark-lime-green);
+      font-weight: 500;
+      font-size: 1.2em;
+      color: black;
+    }
+    input[type="text"] {
+      width: 100%;
+      background-color: transparent;
+      border: 2px solid var(--lime-green);
+      color: white;
+      font-size: 1.3em;
+    }
+  }
+  p {
+    margin-top: 20px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .unidades {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 5%;
+  }
+}

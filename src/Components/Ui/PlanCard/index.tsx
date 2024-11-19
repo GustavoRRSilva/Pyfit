@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
-import CardPlan from "@/Interface/interfaces";
+import { CardPlan } from "@/Interface/interfaces";
 import CorrectImage from "@/Assets/correct.svg";
 import DeleteIcon from "@/Assets/deleteIcon.svg";
 export default function PlanCard({ betterBenefit }: CardPlan) {

@@ -8,11 +8,18 @@ import Delete from "@/Assets/deleteIcon.svg";
 import styles from "./style.module.scss";
 import { useState } from "react";
 import Link from "next/link";
+import { isLogged } from "@/utils/utils";
+import { useRouter } from "next/navigation";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMenuOpen);
+  const router = useRouter();
   const changeMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const Logout = () => {
+    localStorage.removeItem("id");
+    router.push("/");
   };
   return (
     <header className={styles.header}>
@@ -38,8 +45,12 @@ export default function Navbar() {
             className={styles.menu}
           />
         </div>
-        <li>Unidades</li>
-        <li>Planos</li>
+        <li>
+          <a href="/Unidades">Unidades</a>
+        </li>
+        <li>
+          <a href="#plans">Planos</a>
+        </li>
         <li>Conheça</li>
         <li className={styles.inputText}>
           <Image
@@ -52,8 +63,13 @@ export default function Navbar() {
           <input type="text" name="" id="" />
         </li>
         <li className={styles.alunArea}>
-          <Link href="/login">Área do aluno</Link>
+          <Link href={isLogged() ? "/Login" : "/Login"}>Área do aluno</Link>
         </li>
+        {isLogged() && (
+          <li onClick={() => Logout()}>
+            <p>Logout</p>
+          </li>
+        )}
       </ul>
     </header>
   );

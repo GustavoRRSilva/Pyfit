@@ -2,7 +2,8 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import WomenWorkout from "@/Assets/womenWorkout.svg";
 import Link from "next/link";
-export default function Banner() {
+import { BannerProps } from "@/Interface/interfaces";
+export default function Banner({ text }: BannerProps) {
   return (
     <section className={styles.banner}>
       <Image
@@ -13,10 +14,7 @@ export default function Banner() {
         className={styles.womenWorkout}
       />
       <div className={styles.textInfos}>
-        <p className={styles.mainText}>
-          Transforme seu corpo com a mesma precisão que você escreve seus
-          códigos!
-        </p>
+        <p className={styles.mainText}>{text}</p>
         <div className={styles.profits}>
           <div>
             <p className={styles.without}>SEM</p>

@@ -8,10 +8,10 @@ import { useState } from "react";
 import Image from "next/image";
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
-
+  console.log(process.env.NEXT_PUBLIC_API_URL);
   setTimeout(() => {
     setLoading(false);
-  }, 3000);
+  }, 1000);
   return (
     <div className={styles.Home}>
       <Image
@@ -22,7 +22,7 @@ export default function Home() {
         width={20}
       />
       <div className={loading ? styles.homeLoading : styles.home}>
-        <Banner />
+        <Banner text="Transforme seu corpo com a mesma precisão que você escreve seus códigos!" />
         <Plans />
         <Warning />
       </div>

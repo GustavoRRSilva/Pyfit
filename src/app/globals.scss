@@ -23,3 +23,70 @@ a:visited {
 ul {
   list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid var(--lime-green) !important;
+}
+.ant-table-tbody > thead {
+  border-bottom: 1px solid var(--lime-green) !important;
+}
+
+a:visited {
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: var(--background);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+thead {
+  background-color: #1e1f24;
+}
+
+thead th {
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid var(--lime-green);
+}
+
+tr {
+  border: 1px solid !important;
+}
+
+.ant-table-cell {
+  background-color: var(--light-gray) !important;
+  color: white !important;
+  border: none !important;
+}
+
+tbody td {
+  text-align: left; /* Alinhamento padrão */
+}
+
+tbody td.status-success {
+  background-color: var(--lime-green);
+  color: black;
+}
+
+a {
+  color: var(--lime-green); /* Cor normal */
+}
+
+a:hover {
+  color: var(--red-) !important;
+  transition: 0.5s; /* Cor ao passar o mouse */
+}
+
+a:visited {
+  color: var(--lime-green); /* Cor após o link ser visitado */
+}
+
+a:active {
+  color: var(--lime-green); /* Cor quando o link estiver sendo clicado */
+}

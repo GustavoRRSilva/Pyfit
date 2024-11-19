@@ -1,0 +1,39 @@
+.unidade {
+  width: 45%;
+  border: 1px solid var(--lime-green);
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
+  }
+  .location {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img {
+      width: 20px;
+    }
+    p {
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+  a {
+    display: flex;
+    margin: 10px auto;
+    button {
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px 0;
+      background-color: var(--lime-green);
+      font-size: 1.1em;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+  }
+}
