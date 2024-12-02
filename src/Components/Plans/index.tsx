@@ -3,18 +3,18 @@ import styles from "./style.module.scss";
 export default function Plans() {
   return (
     <section className={styles.plans} id="plans">
-      <h2>Conheça nossos planos</h2>
+      <h2>Discover our plans</h2>
       <p>
-        Comece a transformar sua vida hoje com a{" "}
+        Start transforming your life today with{" "}
         <span className={styles.pyFit}>
           {" "}
           <b>Py</b>Fit!
         </span>{" "}
-        Temos o plano <b>ideal</b> para você otimizar sua <b>saúde</b> física e
-        mental, alcançando seus <b>objetivos</b> de forma <b>eficiente</b> e{" "}
-        <b>inteligente</b>. Explore nossos pacotes e escolha o que oferece o
-        melhor <b>custo-benefício</b> para você se manter em forma, assim como
-        otimiza seu <b>código!</b>
+        We have the <b>ideal</b> plan for you to optimize your <b>physical</b>{" "}
+        nd mental health, achieving your goals <b>efficiently</b> and
+        <b> intelligently</b> Explore our packages and choose the one that
+        offers the best <b> value for money </b>to keep you in shape, as well as
+        optimize your <b>code</b>
       </p>
 
       <div className={styles.planDetails}>

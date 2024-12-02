@@ -19,7 +19,7 @@ export default function UnidadeUnical({
         <p>{Localizacao}</p>
       </div>
       <a href={Link}>
-        <button>Ver unidade</button>
+        <button>View Unit</button>
       </a>
     </div>
   );

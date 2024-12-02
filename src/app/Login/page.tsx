@@ -36,7 +36,9 @@ export default function Login() {
   return (
     <section className={styles.login}>
       <h2>Login</h2>
-      <p className={styles.isClient}>Se você já é cliente insira seus dados </p>
+      <p className={styles.isClient}>
+        If you are already a customer, enter your details
+      </p>
       <form action="submit" onSubmit={(e) => login(e)}>
         <label htmlFor="">
           <p>Cpf*</p>
@@ -75,8 +77,9 @@ export default function Login() {
       </form>
 
       <p className={styles.firstAccess}>
-        É seu primeiro acesso? como cliente?{" "}
-        <Link href="/cadastro">Clique aqui</Link> e faça seu cadastro
+        Is this your first time as a customer or do you not remember your
+        password? Click here to register a new one.{" "}
+        <Link href="/cadastro">Click here</Link>  to register a new one.
       </p>
     </section>
   );

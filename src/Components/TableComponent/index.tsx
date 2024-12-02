@@ -37,7 +37,7 @@ export default function TableComponent() {
 
   const columns = [
     {
-      title: "Nome",
+      title: "Name",
       dataIndex: "nome",
       key: "name",
       align: "center" as const,
@@ -52,47 +52,47 @@ export default function TableComponent() {
       width: "200px",
     },
     {
-      title: "Data de Nascimento",
+      title: "Birthday",
       dataIndex: "birthday",
       key: "birthday",
       align: "center" as const,
       render: (birthday: string) => formatarDataComValidacao(birthday),
     },
     {
-      title: "Meses Como membro",
+      title: "Months as member",
       dataIndex: "months_as_member",
       key: "months",
       align: "center" as const,
     },
     {
-      title: "Peso",
+      title: "Weight",
       dataIndex: "weight",
       key: "weight",
       align: "center" as const,
       render: (weight: string) => weight.replace(".", ","),
     },
     {
-      title: "Dias após",
+      title: "Days before",
       dataIndex: "days_before",
       key: "days_before",
       align: "center" as const,
     },
     {
-      title: "Dia da semana da aula",
+      title: "Day of week",
       dataIndex: "day_of_week",
       key: "weekDay",
       align: "center" as const,
       render: (day_of_week: string) => traduzirDiaSemana(day_of_week),
     },
     {
-      title: "Hora da aula",
+      title: "Class time",
       dataIndex: "time",
       key: "time",
       align: "center" as const,
       render: (time: string) => formatarHora(time),
     },
     {
-      title: "Atendido?",
+      title: "Attended?",
       dataIndex: "attended",
       key: "attended",
       align: "center" as const,
@@ -100,10 +100,12 @@ export default function TableComponent() {
   ];
 
   return (
-    <Table
-      dataSource={allData}
-      columns={columns}
-      className={styles.customTable}
-    />
+    <section>
+      <Table
+        dataSource={allData}
+        columns={columns}
+        className={styles.customTable}
+      />
+    </section>
   );
 }

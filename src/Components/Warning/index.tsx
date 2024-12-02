@@ -6,19 +6,18 @@ export default function Warning() {
     <section className={styles.warning}>
       <div>
         <Image width={10} height={10} alt="Warning icon " src={WarningIcon} />
-        <h2>Avisos:</h2>
+        <h2>Warnings:</h2>
       </div>
       <ul>
         <li>
           <p>
-            Adolescentes entre 12 e 17 anos devem estar acompanhados de seu
-            responsável legal na primeira visita à Unidade escolhida, portando
-            documento de identificação.{" "}
+            Adolescents between 12 and 17 years old must be accompanied by their
+            legal guardian on the first visit to the chosen Unit, carrying an
+            identification document.{" "}
           </p>
         </li>
         <li>
-          Para pagamentos em dinheiro, consulte o balcão de atendimento da
-          Unidade selecionada.{" "}
+          For cash payments, consult the service desk of the selected Unit.{" "}
         </li>
       </ul>
     </section>

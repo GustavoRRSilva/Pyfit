@@ -19,6 +19,7 @@ export default function Navbar() {
 
   const Logout = () => {
     localStorage.removeItem("id");
+    window.location.reload();
     router.push("/");
   };
   return (
@@ -46,12 +47,14 @@ export default function Navbar() {
           />
         </div>
         <li>
-          <a href="/Unidades">Unidades</a>
+          <a href="/Unidades">Units</a>
         </li>
         <li>
-          <a href="#plans">Planos</a>
+          <Link href="/#plans">Plans</Link>
         </li>
-        <li>Conheça</li>
+        <li>
+          <Link href={"Know"}>Know</Link>
+        </li>
         <li className={styles.inputText}>
           <Image
             src={Lupa}
@@ -63,13 +66,18 @@ export default function Navbar() {
           <input type="text" name="" id="" />
         </li>
         <li className={styles.alunArea}>
-          <Link href={isLogged() ? "/Login" : "/Login"}>Área do aluno</Link>
+          <Link href={isLogged() ? "/Login" : "/Login"}>
+            {isLogged() ? "Students" : "Student area"}
+          </Link>
         </li>
         {isLogged() && (
           <li onClick={() => Logout()}>
             <p>Logout</p>
           </li>
         )}
+        <li>
+          <Link href={"/Prediction"}>Prediction</Link>
+        </li>
       </ul>
     </header>
   );

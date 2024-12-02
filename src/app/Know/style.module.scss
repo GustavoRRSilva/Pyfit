@@ -1,0 +1,84 @@
+.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid var(--lime-green);
+}
+
+.section {
+  h2 {
+    color: white;
+    margin-top: 10px;
+  }
+  .textImage {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    background-color: rgba($color: #c6c6c6, $alpha: 0.2);
+    margin: 20px 0;
+    .bar {
+      height: 100%;
+      max-height: 300px;
+      width: 2px;
+      background-color: red;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 20;
+      transform: translateY(-50%);
+    }
+    img {
+      width: 50%;
+      height: auto;
+    }
+    p {
+      padding: 40px;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.rates {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  .rate {
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: column;
+    background-color: #bbbbbb;
+    border: 3px solid #74f325;
+    border-radius: 5px;
+    color: black;
+
+    .nameImage {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8em;
+      h3 {
+        font-weight: 600;
+      }
+    }
+    .textStar {
+      margin-top: 20px;
+      font-size: 0.7em;
+
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100px;
+        padding-top: 40px;
+      }
+    }
+    img {
+      width: 60px;
+      height: auto;
+    }
+  }
+}

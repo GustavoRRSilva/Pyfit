@@ -22,7 +22,7 @@ export default function Home() {
         width={20}
       />
       <div className={loading ? styles.homeLoading : styles.home}>
-        <Banner text="Transforme seu corpo com a mesma precisão que você escreve seus códigos!" />
+        <Banner text="Transform your body with the same precision as you write your codes!" />
         <Plans />
         <Warning />
       </div>

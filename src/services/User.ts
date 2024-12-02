@@ -14,10 +14,6 @@ export const getUserData = async () => {
       const errorText = await response.text();
       throw new Error(errorText ? errorText : "");
     }
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(errorText ? errorText : "");
-    }
     const contentType = response.headers.get("content-type");
     if (contentType && contentType.includes("application/json")) {
       const data = await response.json();
@@ -41,10 +37,6 @@ export const getAllUsersData = async () => {
       headers: { "Content-Type": "application/json" },
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(errorText ? errorText : "");
-    }
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(errorText ? errorText : "");

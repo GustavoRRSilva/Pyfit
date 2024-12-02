@@ -37,16 +37,17 @@ a:visited {
   color: inherit;
 }
 
-table {
-  border-collapse: collapse;
-  background-color: var(--background);
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-thead {
-  background-color: #1e1f24;
+section {
+  table {
+    border-collapse: collapse;
+    background-color: var(--background);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  thead {
+    background-color: #1e1f24;
+  }
 }
 
 thead th {
@@ -89,4 +90,17 @@ a:visited {
 
 a:active {
   color: var(--lime-green); /* Cor quando o link estiver sendo clicado */
+}
+
+.content {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.red {
+  color: var(--red-);
+}
+.green {
+  color: var(--lime-green);
 }

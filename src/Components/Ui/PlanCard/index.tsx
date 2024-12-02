@@ -5,14 +5,14 @@ import CorrectImage from "@/Assets/correct.svg";
 import DeleteIcon from "@/Assets/deleteIcon.svg";
 export default function PlanCard({ betterBenefit }: CardPlan) {
   const benefits = [
-    "Sem fidelidade",
-    "Anuidade zero",
-    "Adesão zero",
-    "Acesso a aulas online e presenciais",
-    "Aplicativo exclusivo",
-    "Horários flexíveis",
-    "Espaço equipado com tecnologia de ponta",
-    "Descontos exclusivos em lojas parceiras",
+    "No loyalty",
+    "Zero annual fee",
+    "Zero membership",
+    "Access to online and in-person classes",
+    "Exclusive application",
+    "Flexible hours",
+    "Space equipped with cutting-edge technology.",
+    "Exclusive discounts at partner stores",
   ];
 
   const isValidBenefit = (index: number) => {
@@ -25,19 +25,19 @@ export default function PlanCard({ betterBenefit }: CardPlan) {
   return (
     <div className={styles.card}>
       {betterBenefit && (
-        <span className={styles.betterBenefit}>Melhor custo Beneficio</span>
+        <span className={styles.betterBenefit}>Best value for money</span>
       )}
       <h2 className={styles.planType}>
-        Plano {betterBenefit ? "Plus" : "Basic"}
+        {betterBenefit ? "Plus" : "Basic"} Plan
       </h2>
       <p className={styles.whiteComum}>A partir de </p>
       <h3 className={styles.valuePlan}>
         R$<b>{betterBenefit ? "0,99" : "99,90"}</b>
       </h3>
       <p className={styles.whiteComum}>
-        {betterBenefit ? "no primeiro mês" : "por mês"}
+        {betterBenefit ? "in the first month" : "per month"}
       </p>
-      <button className={styles.toEnroll}>MATRICULE-SE JÁ!</button>
+      <button className={styles.toEnroll}>REGISTER NOW!</button>
       <ul className={styles.benefits}>
         {benefits.map((benefit, index) => (
           <li key={benefit} className={styles.benefit}>

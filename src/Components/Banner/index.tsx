@@ -17,19 +17,19 @@ export default function Banner({ text }: BannerProps) {
         <p className={styles.mainText}>{text}</p>
         <div className={styles.profits}>
           <div>
-            <p className={styles.without}>SEM</p>
+            <p className={styles.without}>WITHOUT</p>
+            <p className={styles.valueWithout}>LOYALTY</p>
+          </div>
+          <div>
+            <p className={styles.without}>WITHOUT</p>
+            <p className={styles.valueWithout}>ANNUITY</p>
+          </div>
+          <div>
+            <p className={styles.without}>WITHOUT</p>
             <p className={styles.valueWithout}>BUGS</p>
           </div>
-          <div>
-            <p className={styles.without}>SEM</p>
-            <p className={styles.valueWithout}>ANUIDADE</p>
-          </div>
-          <div>
-            <p className={styles.without}>SEM</p>
-            <p className={styles.valueWithout}>FIDELIDADE</p>
-          </div>
           <Link href={"#"} className={styles.toEnroll}>
-            MATRICULE-SE JÁ!
+            REGISTER NOW!
           </Link>
         </div>
       </div>

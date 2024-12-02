@@ -1,0 +1,14 @@
+.form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  div {
+    width: 500px;
+  }
+}
+.title {
+  text-align: center;
+  color: white;
+}

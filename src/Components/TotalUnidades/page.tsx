@@ -34,7 +34,7 @@ export default function TotalUnidades() {
         <input type="text" name="" id="" />
         <input type="submit" value="Buscar" />
       </form>
-      <p>Total de unidades encontradas: {unidades.length}</p>
+      <p>Units found: {unidades.length}</p>
       <div className={styles.unidades}>
         {unidades.map((unidade, index) => (
           <UnidadeUnical
