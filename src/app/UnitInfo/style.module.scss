@@ -1,0 +1,81 @@
+.infosUnidade {
+  display: flex;
+  margin-top: 20px;
+  gap: 50px;
+  img {
+    width: 700px;
+    height: auto;
+    border: 2px solid var(--lime-green);
+    border-radius: 5px;
+  }
+  color: white;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  h2 {
+    font-size: 2.4em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  h4 {
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+  p,
+  span {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+}
+.subtitle {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+}
+.images {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.imgModalidades {
+  width: 300px;
+  height: auto;
+}
+
+.inside {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.benefits {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 40px;
+  .benefit {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    img {
+      width: 70px;
+      height: 100px;
+    }
+    border: 2px solid var(--lime-green);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}

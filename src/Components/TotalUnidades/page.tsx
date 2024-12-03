@@ -9,22 +9,22 @@ export default function TotalUnidades() {
     {
       NomeUnidade: "Unidade Centro",
       Localizacao: "Rua Principal, 123 - Centro",
-      Link: "http://www.exemplo.com/unidade-centro",
+      Link: `/unit-details?name=Unidade%20Centro&address=Rua%20Principal,%20123%20-%20Centro`,
     },
     {
       NomeUnidade: "Unidade Norte",
       Localizacao: "Avenida Norte, 456 - Zona Norte",
-      Link: "http://www.exemplo.com/unidade-norte",
+      Link: `/unit-details?name=Unidade%20Norte&address=Avenida%20Norte,%20456%20-%20Zona%20Norte`,
     },
     {
       NomeUnidade: "Unidade Sul",
       Localizacao: "Rua das Flores, 789 - Zona Sul",
-      Link: "http://www.exemplo.com/unidade-sul",
+      Link: `/unit-details?name=Unidade%20Sul&address=Rua%20das%20Flores,%20789%20-%20Zona%20Sul`,
     },
     {
       NomeUnidade: "Unidade Leste",
       Localizacao: "Avenida Leste, 1234 - Zona Leste",
-      Link: "http://www.exemplo.com/unidade-norte",
+      Link: `/unit-details?name=Unidade%20Leste&address=Avenida%20Leste,%201234%20-%20Zona%20Leste`,
     },
   ];
 
