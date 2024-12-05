@@ -8,9 +8,19 @@ import { loginUser } from "@/services/Auth";
 import LoadingIcon from "@/Assets/loading.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { notification } from "antd";
 export default function Login() {
   const router = useRouter();
+  type NotificationType = "success" | "info" | "warning" | "error";
 
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotificationWithIcon = (type: NotificationType) => {
+    api[type]({
+      message: "Notification Title",
+      description: "You logged with sucessfull!",
+    });
+  };
   const [cpf, setCpf] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -26,61 +36,67 @@ export default function Login() {
     setLoading(true);
     try {
       await loginUser({ cpf, password });
-      router.push("/AlunArea");
+      openNotificationWithIcon("success");
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     } catch (e) {
       console.log(e);
     }
-    isLogged();
+
     setLoading(false);
   };
   return (
-    <section className={styles.login}>
-      <h2>Login</h2>
-      <p className={styles.isClient}>
-        If you are already a customer, enter your details
-      </p>
-      <form action="submit" onSubmit={(e) => login(e)}>
-        <label htmlFor="">
-          <p>Cpf*</p>
-          <input
-            type="text"
-            name="cpf"
-            id="cpf"
-            value={cpf}
-            onChange={(e) => setCpf(e.target.value)}
-          />
-        </label>
-        <label htmlFor="">
-          <p>Senha*</p>
-          <input
-            type="password"
-            name="senha"
-            id="senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        {/* <span className={styles.error}>Digite um email válido</span> */}
-        <button type="submit" className={styles.sendForm} disabled={loading}>
-          {loading ? (
-            <Image
-              src={LoadingIcon}
-              alt="Login image"
-              width={10}
-              height={10}
-              className={styles.loadingImage}
+    <>
+      {contextHolder}
+      <section className={styles.login}>
+        <h2>Login</h2>
+        <p className={styles.isClient}>
+          If you are already a customer, enter your details
+        </p>
+        <form action="submit" onSubmit={(e) => login(e)}>
+          <label htmlFor="">
+            <p>Cpf*</p>
+            <input
+              type="text"
+              name="cpf"
+              id="cpf"
+              value={cpf}
+              onChange={(e) => setCpf(e.target.value)}
             />
-          ) : (
-            "login"
-          )}
-        </button>
-      </form>
+          </label>
+          <label htmlFor="">
+            <p>Senha*</p>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          {/* <span className={styles.error}>Digite um email válido</span> */}
+          <button type="submit" className={styles.sendForm} disabled={loading}>
+            {loading ? (
+              <Image
+                src={LoadingIcon}
+                alt="Login image"
+                width={10}
+                height={10}
+                className={styles.loadingImage}
+              />
+            ) : (
+              "login"
+            )}
+          </button>
+        </form>
 
-      <p className={styles.firstAccess}>
-        Is this your first time as a customer or do you not remember your
-        password? Click here to register a new one.{" "}
-        <Link href="/cadastro">Click here</Link>  to register a new one.
-      </p>
-    </section>
+        <p className={styles.firstAccess}>
+          Is this your first time as a customer or do you not remember your
+          password? Click here to register a new one.{" "}
+          <Link href="/cadastro">Click here</Link>  to register a new one.
+        </p>
+      </section>
+    </>
   );
 }

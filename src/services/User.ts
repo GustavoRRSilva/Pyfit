@@ -56,3 +56,8 @@ export const getAllUsersData = async () => {
     }
   }
 };
+
+export const isAdm = async () => {
+  const data = await getAllUsersData();
+  return data?.is_adm;
+};

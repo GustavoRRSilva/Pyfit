@@ -9,22 +9,22 @@ export default function TotalUnidades() {
     {
       NomeUnidade: "Unidade Centro",
       Localizacao: "Rua Principal, 123 - Centro",
-      Link: `/unit-details?name=Unidade%20Centro&address=Rua%20Principal,%20123%20-%20Centro`,
+      Link: `/UnitInfo`,
     },
     {
       NomeUnidade: "Unidade Norte",
       Localizacao: "Avenida Norte, 456 - Zona Norte",
-      Link: `/unit-details?name=Unidade%20Norte&address=Avenida%20Norte,%20456%20-%20Zona%20Norte`,
+      Link: `/UnitInfo`,
     },
     {
       NomeUnidade: "Unidade Sul",
       Localizacao: "Rua das Flores, 789 - Zona Sul",
-      Link: `/unit-details?name=Unidade%20Sul&address=Rua%20das%20Flores,%20789%20-%20Zona%20Sul`,
+      Link: `/UnitInfo`,
     },
     {
       NomeUnidade: "Unidade Leste",
       Localizacao: "Avenida Leste, 1234 - Zona Leste",
-      Link: `/unit-details?name=Unidade%20Leste&address=Avenida%20Leste,%201234%20-%20Zona%20Leste`,
+      Link: `/UnitInfo`,
     },
   ];
 

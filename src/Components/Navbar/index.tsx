@@ -6,22 +6,31 @@ import Lupa from "@/Assets/lupa.svg";
 import Menu from "@/Assets/menu.svg";
 import Delete from "@/Assets/deleteIcon.svg";
 import styles from "./style.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { isLogged } from "@/utils/utils";
 import { useRouter } from "next/navigation";
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(isLogged() != null); // Mantém o estado de login atualizado
+
   const router = useRouter();
   const changeMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    setLoggedIn(isLogged() != null); // Atualiza o estado de login
+  }, [router]);
+
   const Logout = () => {
     localStorage.removeItem("id");
     window.location.reload();
+    setLoggedIn(false);
     router.push("/");
   };
+
   return (
     <header className={styles.header}>
       <ul
@@ -66,18 +75,20 @@ export default function Navbar() {
           <input type="text" name="" id="" />
         </li>
         <li className={styles.alunArea}>
-          <Link href={isLogged() ? "/Login" : "/Login"}>
-            {isLogged() ? "Students" : "Student area"}
+          <Link href={loggedIn ? "/Login" : "/Login"}>
+            {loggedIn ? "Students" : "Student area"}
           </Link>
         </li>
-        {isLogged() && (
+        {loggedIn && (
           <li onClick={() => Logout()}>
             <p>Logout</p>
           </li>
         )}
-        <li>
-          <Link href={"/Prediction"}>Prediction</Link>
-        </li>
+        {loggedIn && (
+          <li>
+            <Link href={"/Prediction"}>Prediction</Link>
+          </li>
+        )}
       </ul>
     </header>
   );

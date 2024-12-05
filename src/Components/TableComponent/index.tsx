@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import styles from "./style.module.scss";
+
 export default function TableComponent() {
   const router = useRouter();
   const [allData, setAlldata] = useState<User[]>();
@@ -20,7 +21,12 @@ export default function TableComponent() {
     const initializeData = async () => {
       try {
         const allUsersData = await getAllUsersData();
-        setAlldata(allUsersData);
+        // Adicionando uma `key` única para cada usuário
+        const dataWithKeys = allUsersData.map((user: User, index: number) => ({
+          ...user,
+          key: user.cpf || index, // Use `cpf` como `key` ou o índice como fallback
+        }));
+        setAlldata(dataWithKeys);
       } catch (e) {
         console.log(e);
       }

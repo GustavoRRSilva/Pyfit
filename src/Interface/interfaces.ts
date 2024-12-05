@@ -28,3 +28,14 @@ export interface UnidadeProps {
   NomeUnidade: string;
   ImageLink: string;
 }
+
+export interface Predict {
+  weight: number;
+  classType: string;
+  time: string;
+  day: string;
+}
+const [weight, setWeight] = useState<number | null>(null);
+const [classType, setClassType] = useState<string | null>(null);
+const [time, setTime] = useState<string | null>(null);
+const [day, setDay] = useState<string | null>(null);
